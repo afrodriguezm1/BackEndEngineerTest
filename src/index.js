@@ -22,5 +22,5 @@ app.use('/api/users', userRoutes)
 app.use('/api/restaurants', restaurantRoutes)   
 
 app.listen(port, () => {
-    console.log("Api escuchando en el puerto " + port)
+    console.log("Api escuchando en el puerto: " + port)
 })

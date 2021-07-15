@@ -1,0 +1,21 @@
+version: "3"
+
+services: 
+    express:
+        container_name: express-container
+        restart: always
+        build: .
+        ports: 
+            - "3000:3000"
+        links: 
+            - mongo
+        volumes: 
+            - .:/usr/src/app
+
+    mongo:
+        container_name: mongo-container
+        image: mongo
+        ports: 
+            - "27017:27017"
+        logging: 
+            driver: none

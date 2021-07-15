@@ -79,7 +79,7 @@ module.exports.getHistoryUser = async function(req, res){
             path: "results"
          }
       })
-   if(user.history.length === 0){return res.state(200).json("El usuario aún no tiene consultas")}
+   if(user.history.length === 0){return res.status(200).json("El usuario aún no tiene consultas")}
 
    //Formateo para el usuario
    let resRestaurantes = []
